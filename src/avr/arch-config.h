@@ -732,7 +732,12 @@ static inline void buttons_init(void) {
 #  define HAVE_SD
 #  define SD_CHANGE_HANDLER     ISR(INT6_vect)
 #  define SD_SUPPLY_VOLTAGE     (1L<<21)
-
+#  define SOFTI2C_PORT    PORTD
+#  define SOFTI2C_PIN     PIND
+#  define SOFTI2C_DDR     DDRD
+#  define SOFTI2C_BIT_SCL PD0
+#  define SOFTI2C_BIT_SDA PD1
+#  define SOFTI2C_DELAY   6
 /* 250kHz slow, 2MHz fast */
 #  define SPI_DIVISOR_SLOW 32
 #  define SPI_DIVISOR_FAST 4
